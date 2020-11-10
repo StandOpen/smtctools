@@ -1,7 +1,46 @@
 # smtctools
 智慧同城工具箱
 
+##Jwt
+
 ```
+JSON WEB TOKEN
+来自https://github.com/F21/jwt
+```
+
+##Sensitive.php
+```
+    /**
+     * 检查是否包含敏感词
+     * @param $content
+     * @return bool
+     */
+    public function checkSensiveExist($content)
+    {
+        $checkedWords = "关键词,关键词1";
+        $instance = Sensitive::getInstance();
+        $instance->addSensitiveWords($checkedWords);
+        return $instance->isExist($content);
+    }
+
+    /**
+     * 替换敏感词
+     * @param $content
+     * @return string
+     */
+    public function checkSensiveReplace($content)
+    {
+        $replaceWords = "关键词,关键词1";
+        $instance = Sensitive::getInstance();
+        $instance->addSensitiveWords($replaceWords);
+        return $instance->replaceWords($content);
+    }
+```
+
+
+##DmPay.php
+```
+
 $config = [
     //签名方式,默认为RSA2(RSA2048)
     'sign_type' => "RSA2",
