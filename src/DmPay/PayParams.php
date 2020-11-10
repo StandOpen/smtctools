@@ -150,6 +150,10 @@ Class PayParams
         $this->params['terminal_id'] = $p;
     }
 
+    /**
+     * 超时时间
+     * @param $time
+     */
     public function setTimeoutExpress($time)
     {
         $this->params['timeout_express'] = $time;
