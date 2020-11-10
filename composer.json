@@ -1,0 +1,19 @@
+{
+    "name": "standopen/smtctools",
+    "description": "智慧同城工具集合",
+    "type": "library",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "standopen",
+            "email": "standopen@foxmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "StandOpen\\": "src/"
+        }
+    },
+    "require": {}
+}
